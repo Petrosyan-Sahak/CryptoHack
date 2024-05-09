@@ -1,0 +1,12 @@
+from Crypto.PublicKey import RSA
+
+# Path to the file containing the RSA key
+key_file_path = 'path_to_your_key_file.pem'
+
+# Read the key file
+with open(key_file_path, 'r') as key_file:
+    key_data = key_file.read()
+
+# Import the RSA key
+rsa_key = RSA.import_key(key_data)
+print(rsa_key)
